@@ -1,0 +1,21 @@
+<div class="container">
+  <div class='card m-4 p-3'>
+    <h1><%= @flat.name%></h1>
+    <p><%= @flat.address%></p>
+  </div>
+
+  <div class="card m-4 p-3">
+    <h2>A bit more about this flat...</h2>
+    <p><%= @flat.description%></p>
+  </div>
+
+  <div class="card m-4 p-3">
+    <h2>Details</h2>
+    <p><%= @flat.price_per_night%></p>
+    <p><%= @flat.number_of_guests%></p>
+  </div>
+
+<%= link_to "Delete", flat_path(@flat), data: {turbo_method: :delete, turbo_confirm: "Are you Sure?"}, class:"btn btn-primary" %>
+<%= link_to "Edit", edit_flat_path(@flat), class:"btn btn-primary" %>
+<%= link_to "Return to all flats", flats_path, class:"btn btn-primary" %>
+</div>
